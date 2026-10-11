@@ -1,0 +1,565 @@
+:root {
+  --cream: #f5f1e8;
+  --green: #193d30;
+  --gold: #a68b55;
+  --gold-dark: #765a2b;
+  --muted: #59615a;
+  --line: #ddd6c8;
+  --surface: #fffcf6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--green);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--gold-dark);
+  outline-offset: 5px;
+}
+
+.container {
+  width: min(1120px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* Header */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+}
+
+.brand {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.site-header nav a {
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dark);
+  text-underline-offset: 6px;
+}
+
+/* Blessing's introduction */
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 72px;
+  padding-block: 64px 72px;
+}
+
+.eyebrow {
+  color: var(--gold-dark);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.intro h1 {
+  margin-top: 16px;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.intro-copy p:not(.eyebrow) {
+  max-width: 32rem;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.owner-photo {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  justify-self: end;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+/* The two businesses */
+
+.businesses {
+  padding-block: 44px 80px;
+  border-top: 1px solid var(--line);
+}
+
+.businesses h2 {
+  margin-bottom: 32px;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.business-card {
+  display: grid;
+  grid-template-columns: 96px minmax(0, 1fr);
+  gap: 24px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--gold);
+  border-radius: 3px;
+}
+
+.business-logo {
+  display: block;
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  align-self: start;
+}
+
+.business-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.business-copy h3 {
+  font-size: 1.6rem;
+  line-height: 1.25;
+}
+
+.business-copy p {
+  margin-block: 14px 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.button {
+  display: inline-block;
+  max-width: 100%;
+  min-height: 44px;
+  margin-top: auto;
+  padding: 12px 18px;
+  background: var(--green);
+  color: var(--surface);
+  border: 1px solid var(--green);
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #28513f;
+  border-color: #28513f;
+}
+
+/* Footer */
+
+.site-footer {
+  padding-block: 26px;
+  background: var(--green);
+  color: var(--cream);
+  border-top: 3px solid var(--gold);
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+}
+
+/* Tablets and phones */
+
+@media (max-width: 800px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-block: 48px;
+  }
+
+  .owner-photo {
+    justify-self: center;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .businesses {
+    padding-block: 36px 56px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-block: 20px;
+  }
+
+  .site-header nav {
+    gap: 24px;
+  }
+
+  .business-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .business-logo {
+    width: 112px;
+    height: 112px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+/* Bee Victuals page */
+
+.food-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
+  padding-block: 64px 72px;
+}
+
+.food-intro h1 {
+  margin-top: 16px;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.food-intro-copy > p:not(.eyebrow) {
+  max-width: 32rem;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.food-intro-copy .service-note {
+  font-size: 0.9rem;
+}
+
+.food-intro-copy .button {
+  margin-top: 28px;
+}
+
+.food-intro-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.food-gallery {
+  padding-block: 44px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.section-heading h2 {
+  margin-top: 12px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.gallery-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 28px;
+  margin-top: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.gallery-navigation a {
+  padding-block: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.gallery-navigation a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dark);
+  text-underline-offset: 6px;
+}
+
+.gallery-category {
+  padding-block: 36px 20px;
+  scroll-margin-top: 24px;
+}
+
+.gallery-category h3 {
+  margin-bottom: 22px;
+  font-size: 1.8rem;
+  line-height: 1.25;
+}
+
+.food-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.food-photo {
+  min-width: 0;
+  margin: 0;
+}
+
+.food-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 3px;
+  background: var(--line);
+}
+
+.food-photo figcaption {
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.food-contact {
+  margin-top: 40px;
+  padding-block: 48px 64px;
+  border-top: 1px solid var(--line);
+}
+
+.food-contact h2 {
+  margin-top: 12px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.food-contact > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.food-contact .button {
+  margin-top: 28px;
+}
+
+@media (max-width: 800px) {
+  .food-intro {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-block: 48px;
+  }
+
+  .food-intro-photo {
+    max-width: 480px;
+    justify-self: center;
+  }
+
+  .food-photo-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .food-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .food-photo img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .gallery-navigation {
+    gap: 8px 20px;
+  }
+
+  .gallery-category {
+    padding-top: 28px;
+  }
+
+  .food-contact {
+    padding-block: 36px 48px;
+  }
+}
+
+/* Bee Beauty Studio page */
+
+.beauty-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 64px;
+  padding-block: 64px 72px;
+}
+
+.beauty-intro h1 {
+  margin-top: 16px;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.beauty-intro-copy > p:not(.eyebrow) {
+  max-width: 32rem;
+  margin-top: 22px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.beauty-intro-copy .button {
+  margin-top: 28px;
+}
+
+.beauty-intro-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+}
+
+.beauty-gallery {
+  padding-block: 44px 16px;
+  border-top: 1px solid var(--line);
+}
+
+.beauty-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.beauty-photo {
+  min-width: 0;
+  margin: 0;
+}
+
+.beauty-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3px;
+  background: var(--line);
+}
+
+.beauty-photo figcaption {
+  padding-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.beauty-contact {
+  margin-top: 40px;
+  padding-block: 48px 64px;
+  border-top: 1px solid var(--line);
+}
+
+.beauty-contact h2 {
+  margin-top: 12px;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+}
+
+.beauty-contact > p:not(.eyebrow) {
+  max-width: 38rem;
+  margin-top: 20px;
+  color: var(--muted);
+}
+
+.beauty-contact .button {
+  margin-top: 28px;
+}
+
+@media (max-width: 800px) {
+  .beauty-intro {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-block: 48px;
+  }
+
+  .beauty-intro-photo {
+    max-width: 480px;
+    justify-self: center;
+  }
+
+  .beauty-photo-grid {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .beauty-photo-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .beauty-contact {
+    padding-block: 36px 48px;
+  }
+}
