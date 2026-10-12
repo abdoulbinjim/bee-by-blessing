@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-        content="Explore cooked meals, cakes, pastries, small chops and food hampers from Bee Victuals in Eket, Akwa Ibom.">
+
+  <meta
+    name="description"
+    content="Explore cooked meals, cakes, pastries, small chops and food hampers from Bee Victuals in Eket, Akwa Ibom."
+  >
+
   <title>Bee Victuals | Bee by Blessing</title>
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+
+<body class="page-food">
   <header class="site-header">
     <div class="container header-content">
-      <a class="brand" href="index.html">Bee by Blessing</a>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">B.</span>
+        <span>Bee <i>by Blessing</i></span>
+      </a>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -22,9 +32,13 @@
   </header>
 
   <main>
-    <section class="food-intro container" aria-labelledby="food-title">
-      <div class="food-intro-copy">
+    <section
+      class="food-intro container"
+      aria-labelledby="food-title"
+    >
+      <div class="food-intro-copy reveal">
         <p class="eyebrow">Eket, Akwa Ibom</p>
+
         <h1 id="food-title">Bee Victuals</h1>
 
         <p>
@@ -33,150 +47,615 @@
           speak with Blessing about what you have in mind.
         </p>
 
-        <p class="service-note">Delivery and customer pickup available.</p>
+        <p class="service-note">
+          Delivery and customer pickup available.
+        </p>
 
-        <a class="button"
-           href="https://wa.me/2349075301263?text=Hello%20Blessing%2C%20I%20would%20like%20to%20discuss%20a%20food%20order.">
-          Discuss an order on WhatsApp
+        <a
+          class="button"
+          href="https://wa.me/2349075301263?text=Hello%20Blessing%2C%20I%20would%20like%20to%20discuss%20a%20food%20order."
+        >
+          <span>Discuss an order on WhatsApp</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
 
-      <img class="food-intro-photo"
-           src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39.jpg"
-           alt="Rice served with plantain, salad and sauced meat"
-           width="944"
-           height="974">
+      <div class="hero-visual">
+        <div class="image-halo" aria-hidden="true"></div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="food-intro-photo"
+            src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39.jpg"
+            alt="Rice served with plantain, salad and sauced meat"
+            width="944"
+            height="974"
+          >
+        </div>
+
+        <span class="image-badge">From Blessing’s kitchen</span>
+        <span class="image-spark" aria-hidden="true">✳</span>
+      </div>
     </section>
 
-    <section class="food-gallery container" id="gallery"
-             aria-labelledby="gallery-title">
-      <div class="section-heading">
+    <section
+      class="gallery container"
+      id="gallery"
+      aria-labelledby="gallery-title"
+    >
+      <div class="section-heading reveal">
         <p class="eyebrow">From the kitchen</p>
-        <h2 id="gallery-title">A taste of what we offer</h2>
+        <h2 id="gallery-title">Made to be enjoyed.</h2>
+
+        <p class="section-note">
+          Explore all 40 photos. Tap a picture for a closer look.
+        </p>
       </div>
 
-      <nav class="gallery-navigation" aria-label="Food categories">
-        <a href="#cooked-meals">Cooked Meals</a>
-        <a href="#cakes-pastries">Cakes &amp; Pastries</a>
-        <a href="#small-chops">Small Chops</a>
-        <a href="#food-hampers">Food Trays &amp; Hampers</a>
-      </nav>
+      <div
+        class="gallery-filters"
+        role="group"
+        aria-label="Gallery categories"
+        hidden
+      >
+        <button
+          type="button"
+          class="filter active"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          All <span>40</span>
+        </button>
 
-      <section class="gallery-category" id="cooked-meals"
-               aria-labelledby="meals-title">
-        <h3 id="meals-title">Cooked Meals</h3>
+        <button
+          type="button"
+          class="filter"
+          data-filter="cooked-meals"
+          aria-pressed="false"
+        >
+          Cooked meals <span>23</span>
+        </button>
 
-        <div class="food-photo-grid">
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-38.jpg"
-                 alt="Two tubs of okra soup with seafood"
-                 loading="lazy">
-            <figcaption>Soups</figcaption>
+        <button
+          type="button"
+          class="filter"
+          data-filter="cakes-pastries"
+          aria-pressed="false"
+        >
+          Cakes &amp; pastries <span>7</span>
+        </button>
+
+        <button
+          type="button"
+          class="filter"
+          data-filter="small-chops"
+          aria-pressed="false"
+        >
+          Small chops <span>6</span>
+        </button>
+
+        <button
+          type="button"
+          class="filter"
+          data-filter="food-hampers"
+          aria-pressed="false"
+        >
+          Trays &amp; hampers <span>4</span>
+        </button>
+      </div>
+
+      <p class="gallery-status sr-only" aria-live="polite"></p>
+
+      <!-- Cooked meals: 23 photos -->
+
+      <section
+        class="gallery-category"
+        id="cooked-meals"
+        data-category="cooked-meals"
+        aria-labelledby="cooked-meals-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="cooked-meals-title">Cooked meals</h3>
+          <span>23 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-38.jpg"
+               aria-label="Enlarge: Soups and seafood">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-38.jpg"
+                   alt="Soups and seafood" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soups and seafood</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_2.jpg"
-                 alt="Rice with vegetables and grilled chicken"
-                 loading="lazy">
-            <figcaption>Rice meals</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-40.jpg"
+               aria-label="Enlarge: Sauced meal in a takeaway tub">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-40.jpg"
+                   alt="Sauced meal in a takeaway tub" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Sauced meal in a takeaway tub</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33.jpg"
-                 alt="Pasta with vegetables and sauced fish"
-                 loading="lazy">
-            <figcaption>Pasta</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-41.jpg"
+               aria-label="Enlarge: Leafy soup in a purple bowl">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-41.jpg"
+                   alt="Leafy soup in a purple bowl" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Leafy soup in a purple bowl</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-42.jpg"
+               aria-label="Enlarge: Soup in a takeaway tub">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-42.jpg"
+                   alt="Soup in a takeaway tub" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup in a takeaway tub</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-42_1.jpg"
+               aria-label="Enlarge: Soup prepared for serving">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-42_1.jpg"
+                   alt="Soup prepared for serving" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup prepared for serving</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43.jpg"
+               aria-label="Enlarge: Takeaway soup tubs">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43.jpg"
+                   alt="Takeaway soup tubs" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Takeaway soup tubs</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43_2.jpg"
+               aria-label="Enlarge: Soup tubs with assorted ingredients">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43_2.jpg"
+                   alt="Soup tubs with assorted ingredients" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup tubs with assorted ingredients</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50.jpg"
+               aria-label="Enlarge: Rice with sauce">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50.jpg"
+                   alt="Rice with sauce" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice with sauce</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50_1.jpg"
+               aria-label="Enlarge: Green vegetable soup">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50_1.jpg"
+                   alt="Green vegetable soup" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Green vegetable soup</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50_2.jpg"
+               aria-label="Enlarge: Red soup in takeaway tubs">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-50_2.jpg"
+                   alt="Red soup in takeaway tubs" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Red soup in takeaway tubs</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-51.jpg"
+               aria-label="Enlarge: Vegetable meal">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-51.jpg"
+                   alt="Vegetable meal" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Vegetable meal</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-52.jpg"
+               aria-label="Enlarge: Soup served with swallow">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-52.jpg"
+                   alt="Soup served with swallow" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup served with swallow</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55.jpg"
+               aria-label="Enlarge: Rice with eggs and meat">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55.jpg"
+                   alt="Rice with eggs and meat" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice with eggs and meat</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55_1.jpg"
+               aria-label="Enlarge: Soup with assorted meat and swallow">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55_1.jpg"
+                   alt="Soup with assorted meat and swallow" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup with assorted meat and swallow</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55_2.jpg"
+               aria-label="Enlarge: Assorted meat meal">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-55_2.jpg"
+                   alt="Assorted meat meal" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Assorted meat meal</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-56.jpg"
+               aria-label="Enlarge: Soup and swallow">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-56.jpg"
+                   alt="Soup and swallow" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Soup and swallow</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-56_1.jpg"
+               aria-label="Enlarge: Sauced meal in a bowl">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-56_1.jpg"
+                   alt="Sauced meal in a bowl" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Sauced meal in a bowl</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33.jpg"
+               aria-label="Enlarge: Pasta with vegetables">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33.jpg"
+                   alt="Pasta with vegetables" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Pasta with vegetables</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_1.jpg"
+               aria-label="Enlarge: Sauced chicken pieces">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_1.jpg"
+                   alt="Sauced chicken pieces" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Sauced chicken pieces</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_2.jpg"
+               aria-label="Enlarge: Rice with grilled chicken">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_2.jpg"
+                   alt="Rice with grilled chicken" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice with grilled chicken</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_3.jpg"
+               aria-label="Enlarge: Rice with chicken and plantain">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-33_3.jpg"
+                   alt="Rice with chicken and plantain" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice with chicken and plantain</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-37.jpg"
+               aria-label="Enlarge: Rice cups and vegetables">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-37.jpg"
+                   alt="Rice cups and vegetables" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice cups and vegetables</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39.jpg"
+               aria-label="Enlarge: Rice with plantain, salad and sauced meat">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39.jpg"
+                   alt="Rice with plantain, salad and sauced meat" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice with plantain, salad and sauced meat</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="gallery-category" id="cakes-pastries"
-               aria-labelledby="cakes-title">
-        <h3 id="cakes-title">Cakes &amp; Pastries</h3>
+      <!-- Cakes and pastries: 7 photos -->
 
-        <div class="food-photo-grid">
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-31.jpg"
-                 alt="Pink and purple birthday cake with butterfly decorations"
-                 loading="lazy">
-            <figcaption>Celebration cakes</figcaption>
+      <section
+        class="gallery-category"
+        id="cakes-pastries"
+        data-category="cakes-pastries"
+        aria-labelledby="cakes-pastries-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="cakes-pastries-title">Cakes &amp; pastries</h3>
+          <span>07 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-31.jpg"
+               aria-label="Enlarge: Pink and purple celebration cake">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-31.jpg"
+                   alt="Pink and purple celebration cake" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Pink and purple celebration cake</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35.jpg"
-                 alt="Boxes of plain and sugar-coated filled doughnuts"
-                 loading="lazy">
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34_2.jpg"
+               aria-label="Enlarge: White celebration cake with chocolate decoration">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34_2.jpg"
+                   alt="White celebration cake with chocolate decoration" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>White celebration cake with chocolate decoration</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35.jpg"
+               aria-label="Enlarge: Doughnuts">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35.jpg"
+                   alt="Doughnuts" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
             <figcaption>Doughnuts</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_1.jpg"
-                 alt="Baked pastries arranged on baking trays"
-                 loading="lazy">
-            <figcaption>Pastries</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_1.jpg"
+               aria-label="Enlarge: Baked pastries on trays">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_1.jpg"
+                   alt="Baked pastries on trays" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Baked pastries on trays</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39_2.jpg"
+               aria-label="Enlarge: White birthday cake with pink hearts">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39_2.jpg"
+                   alt="White birthday cake with pink hearts" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>White birthday cake with pink hearts</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40.jpg"
+               aria-label="Enlarge: Red cake loaves in foil tins">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40.jpg"
+                   alt="Red cake loaves in foil tins" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Red cake loaves in foil tins</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40_2.jpg"
+               aria-label="Enlarge: Assorted topped cake loaves">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40_2.jpg"
+                   alt="Assorted topped cake loaves" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Assorted topped cake loaves</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="gallery-category" id="small-chops"
-               aria-labelledby="chops-title">
-        <h3 id="chops-title">Small Chops</h3>
+      <!-- Small chops: 6 photos -->
 
-        <div class="food-photo-grid">
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38.jpg"
-                 alt="Small chops box with spring rolls, samosas, puff-puff and skewers"
-                 loading="lazy">
-            <figcaption>Mixed small chops</figcaption>
+      <section
+        class="gallery-category"
+        id="small-chops"
+        data-category="small-chops"
+        aria-labelledby="small-chops-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="small-chops-title">Small chops</h3>
+          <span>06 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34.jpg"
+               aria-label="Enlarge: Boxes of puff-puff">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34.jpg"
+                   alt="Boxes of puff-puff" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Boxes of puff-puff</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34_1.jpg"
-                 alt="Close-up of golden puff-puff"
-                 loading="lazy">
-            <figcaption>Puff-puff</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34_1.jpg"
+               aria-label="Enlarge: Golden puff-puff">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-34_1.jpg"
+                   alt="Golden puff-puff" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Golden puff-puff</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_2.jpg"
-                 alt="Bottles filled with bite-sized crunchy snacks"
-                 loading="lazy">
-            <figcaption>Packaged snacks</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_2.jpg"
+               aria-label="Enlarge: Bottled crunchy snacks">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-35_2.jpg"
+                   alt="Bottled crunchy snacks" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Bottled crunchy snacks</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38.jpg"
+               aria-label="Enlarge: Mixed small chops platter">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38.jpg"
+                   alt="Mixed small chops platter" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Mixed small chops platter</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_3.jpg"
+               aria-label="Enlarge: Puff-puff, spring rolls and samosas">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_3.jpg"
+                   alt="Puff-puff, spring rolls and samosas" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Puff-puff, spring rolls and samosas</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39_1.jpg"
+               aria-label="Enlarge: Small chops and sauced chicken tray">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39_1.jpg"
+                   alt="Small chops and sauced chicken tray" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Small chops and sauced chicken tray</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="gallery-category" id="food-hampers"
-               aria-labelledby="hampers-title">
-        <h3 id="hampers-title">Food Trays &amp; Hampers</h3>
+      <!-- Trays and hampers: 4 photos -->
 
-        <div class="food-photo-grid">
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43_1.jpg"
-                 alt="Birthday hamper with meals, chicken, cake, snacks and drinks"
-                 loading="lazy">
-            <figcaption>Birthday hampers</figcaption>
+      <section
+        class="gallery-category"
+        id="food-hampers"
+        data-category="food-hampers"
+        aria-labelledby="food-hampers-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="food-hampers-title">Trays &amp; hampers</h3>
+          <span>04 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43_1.jpg"
+               aria-label="Enlarge: Birthday food hamper">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-20-58-43_1.jpg"
+                   alt="Birthday food hamper" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Birthday food hamper</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_1.jpg"
-                 alt="Food boxes with rice, prawns, chicken, plantain and salad"
-                 loading="lazy">
-            <figcaption>Food boxes</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_1.jpg"
+               aria-label="Enlarge: Rice and seafood food boxes">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_1.jpg"
+                   alt="Rice and seafood food boxes" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Rice and seafood food boxes</figcaption>
           </figure>
 
-          <figure class="food-photo">
-            <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40_1.jpg"
-                 alt="Food hamper with rice, pasta, whole fish, small chops and snacks"
-                 loading="lazy">
-            <figcaption>Food hampers</figcaption>
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_2.jpg"
+               aria-label="Enlarge: Food hamper with takeaway meals">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-38_2.jpg"
+                   alt="Food hamper with takeaway meals" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Food hamper with takeaway meals</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a class="photo-open"
+               href="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40_1.jpg"
+               aria-label="Enlarge: Food hamper with rice, pasta and fish">
+              <img src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-40_1.jpg"
+                   alt="Food hamper with rice, pasta and fish" loading="lazy" decoding="async">
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+            <figcaption>Food hamper with rice, pasta and fish</figcaption>
           </figure>
         </div>
       </section>
     </section>
 
-    <section class="food-contact container" id="contact"
-             aria-labelledby="contact-title">
+    <section
+      class="contact-panel container reveal"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <p class="eyebrow">Let’s discuss your order</p>
       <h2 id="contact-title">What do you have in mind?</h2>
 
@@ -186,23 +665,67 @@
         or pickup with you on WhatsApp.
       </p>
 
-      <a class="button"
-         href="https://wa.me/2349075301263?text=Hello%20Blessing%2C%20I%20would%20like%20to%20discuss%20a%20food%20order.">
-        Message Blessing on WhatsApp
+      <a
+        class="button"
+        href="https://wa.me/2349075301263?text=Hello%20Blessing%2C%20I%20would%20like%20to%20discuss%20a%20food%20order."
+      >
+        <span>Message Blessing on WhatsApp</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
       </a>
-      <a class="button"
-         href="https://www.facebook.com/share/1VMCW5vS6z/?mibextid=wwXIfr"
-            target="_blank"
-               rel="noopener noreferrer">
-                 Follow Bee Victuals on Facebook
-        </a>
+
+      <a
+        class="button"
+        href="https://www.facebook.com/share/1VMCW5vS6z/?mibextid=wwXIfr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Follow Bee Victuals on Facebook</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
+      </a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-content">
+      <a href="index.html" class="footer-brand">Bee by Blessing</a>
       <p>Bee Victuals · Eket, Akwa Ibom</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Photo viewer">
+    <div class="lightbox-toolbar">
+      <span class="lightbox-count"></span>
+
+      <button
+        type="button"
+        class="lightbox-close"
+        aria-label="Close photo viewer"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="lightbox-stage">
+      <button
+        type="button"
+        class="lightbox-prev"
+        aria-label="Previous photo"
+      >
+        ‹
+      </button>
+
+      <img class="lightbox-image" alt="">
+
+      <button
+        type="button"
+        class="lightbox-next"
+        aria-label="Next photo"
+      >
+        ›
+      </button>
+    </div>
+
+    <p class="lightbox-caption"></p>
+  </dialog>
 </body>
 </html>

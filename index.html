@@ -3,15 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Meet Blessing and explore Bee Victuals and Bee Beauty Studio in Eket, Akwa Ibom.">
+
+  <meta
+    name="description"
+    content="Meet Blessing and explore Bee Victuals and Bee Beauty Studio in Eket, Akwa Ibom."
+  >
+
   <title>Bee by Blessing | Food &amp; Beauty</title>
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 
-<body>
+<body class="page-index">
   <header class="site-header">
     <div class="container header-content">
-      <a class="brand" href="index.html">Bee by Blessing</a>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">B.</span>
+        <span>Bee <i>by Blessing</i></span>
+      </a>
 
       <nav aria-label="Main navigation">
         <a href="#about">Meet Blessing</a>
@@ -21,10 +31,17 @@
   </header>
 
   <main>
-    <section class="intro container" id="about" aria-labelledby="intro-title">
-      <div class="intro-copy">
+    <section
+      class="intro container"
+      id="about"
+      aria-labelledby="intro-title"
+    >
+      <div class="intro-copy reveal">
         <p class="eyebrow">Eket, Akwa Ibom</p>
-        <h1 id="intro-title">I’m Blessing.</h1>
+
+        <h1 id="intro-title">
+          I’m <em>Blessing.</em>
+        </h1>
 
         <p>
           I’m the owner of Bee Victuals and Bee Beauty Studio.
@@ -36,30 +53,58 @@
           Here, you can explore both businesses, see my work
           and get in touch.
         </p>
-    <a class="button"
-        href="https://www.linkedin.com/in/blessing-michael-032a00291"
-        target="_blank"
-        rel="noopener noreferrer"
-        style="margin-top: 28px;">
-        Connect with me on LinkedIn
-    </a>
+
+        <a
+          class="button"
+          href="https://www.linkedin.com/in/blessing-michael-032a00291"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Connect with me on LinkedIn</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
       </div>
 
-      <img
-        class="owner-photo"
-        src="BLESSING'S PHOTO.jpg"
-        alt="Blessing, owner of Bee Victuals and Bee Beauty Studio"
-        width="480"
-        height="640"
-      >
+      <div class="hero-visual">
+        <div class="image-halo" aria-hidden="true"></div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="owner-photo"
+            src="BLESSING'S PHOTO.jpg"
+            alt="Blessing, owner of Bee Victuals and Bee Beauty Studio"
+            width="480"
+            height="640"
+          >
+        </div>
+
+        <span class="image-badge">Food. Beauty. Blessing.</span>
+        <span class="image-spark" aria-hidden="true">✳</span>
+      </div>
     </section>
 
-    <section class="businesses container" id="businesses"
-             aria-labelledby="businesses-title">
-      <h2 id="businesses-title">Explore the businesses</h2>
+    <section
+      class="businesses container"
+      id="businesses"
+      aria-labelledby="businesses-title"
+    >
+      <div class="section-heading reveal">
+        <p class="eyebrow">Two passions. One personal touch.</p>
+        <h2 id="businesses-title">Explore the businesses</h2>
+      </div>
 
       <div class="business-grid">
-        <article class="business-card">
+        <article class="business-card reveal">
+          <div class="business-cover">
+            <img
+              src="BEE VICTUALS PICTURES/PHOTO-2026-10-02-22-13-39.jpg"
+              alt="Rice, plantain and sauced meat"
+              loading="lazy"
+            >
+
+            <span>Food &amp; catering</span>
+          </div>
+
           <img
             class="business-logo"
             src="BEE VICTUALS LOGO.jpg"
@@ -71,15 +116,30 @@
 
           <div class="business-copy">
             <h3>Bee Victuals</h3>
+
             <p>
               Cooked meals, event catering, cakes, pastries and
               small chops. Delivery and customer pickup are available.
             </p>
-            <a class="button" href="food.html">Explore Bee Victuals</a>
+
+            <a class="button" href="food.html">
+              <span>Explore Bee Victuals</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
 
-        <article class="business-card">
+        <article class="business-card reveal">
+          <div class="business-cover">
+            <img
+              src="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
+              alt="Pink makeup look by Bee Beauty Studio"
+              loading="lazy"
+            >
+
+            <span>Hair &amp; beauty</span>
+          </div>
+
           <img
             class="business-logo"
             src="BEE BEAUTY STUDIO LOGO.jpg"
@@ -91,11 +151,16 @@
 
           <div class="business-copy">
             <h3>Bee Beauty Studio</h3>
+
             <p>
               Wig installation, revamp and maintenance, styling,
               braids, makeup and beauty essentials.
             </p>
-            <a class="button" href="beauty.html">Explore Bee Beauty Studio</a>
+
+            <a class="button" href="beauty.html">
+              <span>Explore Bee Beauty Studio</span>
+              <span class="button-arrow" aria-hidden="true">↗</span>
+            </a>
           </div>
         </article>
       </div>
@@ -103,7 +168,8 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-content">
+      <a href="index.html" class="footer-brand">Bee by Blessing</a>
       <p>Bee by Blessing · Eket, Akwa Ibom</p>
     </div>
   </footer>

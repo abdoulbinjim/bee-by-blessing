@@ -3,14 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore braids, wig styling and makeup by Bee Beauty Studio in Eket, Akwa Ibom.">
+
+  <meta
+    name="description"
+    content="Explore braids, wig styling and makeup by Bee Beauty Studio in Eket, Akwa Ibom."
+  >
+
   <title>Bee Beauty Studio | Bee by Blessing</title>
+
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+
+<body class="page-beauty">
   <header class="site-header">
     <div class="container header-content">
-      <a class="brand" href="index.html">Bee by Blessing</a>
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">B.</span>
+        <span>Bee <i>by Blessing</i></span>
+      </a>
 
       <nav aria-label="Main navigation">
         <a href="index.html">Home</a>
@@ -21,147 +32,474 @@
   </header>
 
   <main>
-    <section class="beauty-intro container" aria-labelledby="beauty-title">
-      <div class="beauty-intro-copy">
+    <section
+      class="beauty-intro container"
+      aria-labelledby="beauty-title"
+    >
+      <div class="beauty-intro-copy reveal">
         <p class="eyebrow">Eket, Akwa Ibom</p>
+
         <h1 id="beauty-title">Bee Beauty Studio</h1>
 
-        <p>Wig installation, revamp and maintenance, styling,
-          braids, makeup and beauty essentials.</p>
+        <p>
+          Wig installation, revamp and maintenance, styling,
+          braids, makeup and beauty essentials.
+        </p>
 
-        <p>Explore selected work below and get in touch with
-          Blessing to discuss the service you have in mind.</p>
+        <p>
+          Explore our work below and get in touch with Blessing
+          to discuss the service you have in mind.
+        </p>
 
-        <a class="button"
-           href="https://www.tiktok.com/@beebeauty_studio?_r=1&amp;_t=ZS-9AS76QxqmhO"
-           target="_blank"
-           rel="noopener noreferrer">
-          Find us on TikTok
+        <a
+          class="button"
+          href="https://www.tiktok.com/@beebeauty_studio?_r=1&amp;_t=ZS-9AS76QxqmhO"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>Find us on TikTok</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
         </a>
       </div>
 
-      <img class="beauty-intro-photo"
-           src="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
-           alt="Pink eye makeup and glossy pink lips by Bee Beauty Studio">
+      <div class="hero-visual">
+        <div class="image-halo" aria-hidden="true"></div>
+
+        <div class="hero-image-wrap">
+          <img
+            class="beauty-intro-photo"
+            src="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
+            alt="Pink eye makeup and glossy pink lips by Bee Beauty Studio"
+          >
+        </div>
+
+        <span class="image-badge">The Bee Beauty touch</span>
+        <span class="image-spark" aria-hidden="true">✳</span>
+      </div>
     </section>
 
-    <section class="beauty-gallery container"
-             id="gallery"
-             aria-labelledby="gallery-title">
-      <div class="section-heading">
+    <section
+      class="gallery container"
+      id="gallery"
+      aria-labelledby="gallery-title"
+    >
+      <div class="section-heading reveal">
         <p class="eyebrow">From the studio</p>
-        <h2 id="gallery-title">Selected work</h2>
+        <h2 id="gallery-title">A look for every you.</h2>
+
+        <p class="section-note">
+          Explore all 13 photos. Tap a picture for a closer look.
+        </p>
       </div>
 
-      <nav class="gallery-navigation" aria-label="Beauty gallery categories">
-        <a href="#braids">Braids</a>
-        <a href="#wigs-styling">Wigs &amp; Styling</a>
-        <a href="#makeup">Makeup</a>
-      </nav>
+      <div
+        class="gallery-filters"
+        role="group"
+        aria-label="Gallery categories"
+        hidden
+      >
+        <button
+          type="button"
+          class="filter active"
+          data-filter="all"
+          aria-pressed="true"
+        >
+          All <span>13</span>
+        </button>
 
-      <section class="gallery-category"
-               id="braids"
-               aria-labelledby="braids-title">
-        <h3 id="braids-title">Braids</h3>
+        <button
+          type="button"
+          class="filter"
+          data-filter="braids"
+          aria-pressed="false"
+        >
+          Braids <span>5</span>
+        </button>
 
-        <div class="beauty-photo-grid">
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7528.jpg"
-                 alt="Rust-coloured braided bob with curled ends"
-                 loading="lazy">
-            <figcaption>Braided bob</figcaption>
+        <button
+          type="button"
+          class="filter"
+          data-filter="wigs-styling"
+          aria-pressed="false"
+        >
+          Wigs &amp; styling <span>5</span>
+        </button>
+
+        <button
+          type="button"
+          class="filter"
+          data-filter="makeup"
+          aria-pressed="false"
+        >
+          Makeup <span>3</span>
+        </button>
+      </div>
+
+      <p class="gallery-status sr-only" aria-live="polite"></p>
+
+      <!-- Braids -->
+
+      <section
+        class="gallery-category"
+        id="braids"
+        data-category="braids"
+        aria-labelledby="braids-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="braids-title">Braids</h3>
+          <span>05 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7528.jpg"
+              aria-label="Enlarge: Rust-coloured braided bob with curled ends"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7528.jpg"
+                alt="Rust-coloured braided bob with curled ends"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Rust-coloured braided bob with curled ends
+            </figcaption>
           </figure>
 
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7534.jpg"
-                 alt="Detailed cornrow pattern with curled braids in an updo"
-                 loading="lazy">
-            <figcaption>Braided updo</figcaption>
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7533.jpg"
+              aria-label="Enlarge: Patterned cornrows viewed from the front"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7533.jpg"
+                alt="Patterned cornrows viewed from the front"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Patterned cornrows viewed from the front
+            </figcaption>
           </figure>
 
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7539.jpg"
-                 alt="Blonde braids gathered into a high bun"
-                 loading="lazy">
-            <figcaption>Blonde braids</figcaption>
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7534.jpg"
+              aria-label="Enlarge: Cornrow updo with curled braids"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7534.jpg"
+                alt="Cornrow updo with curled braids"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Cornrow updo with curled braids</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7535.jpg"
+              aria-label="Enlarge: Detailed side view of a braided updo"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7535.jpg"
+                alt="Detailed side view of a braided updo"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Detailed side view of a braided updo
+            </figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7539.jpg"
+              aria-label="Enlarge: Blonde braids gathered into a bun"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7539.jpg"
+                alt="Blonde braids gathered into a bun"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Blonde braids gathered into a bun</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="gallery-category"
-               id="wigs-styling"
-               aria-labelledby="styling-title">
-        <h3 id="styling-title">Wigs &amp; Styling</h3>
+      <!-- Wigs and styling -->
 
-        <div class="beauty-photo-grid">
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7538.jpg"
-                 alt="Straight black bob with a centre part"
-                 loading="lazy">
-            <figcaption>Bob styling</figcaption>
+      <section
+        class="gallery-category"
+        id="wigs-styling"
+        data-category="wigs-styling"
+        aria-labelledby="wigs-styling-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="wigs-styling-title">Wigs &amp; styling</h3>
+          <span>05 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7538.jpg"
+              aria-label="Enlarge: Straight black bob with a centre part"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7538.jpg"
+                alt="Straight black bob with a centre part"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Straight black bob with a centre part
+            </figcaption>
           </figure>
 
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7540.jpg"
-                 alt="Long straight blonde hair with a centre part"
-                 loading="lazy">
-            <figcaption>Straight styling</figcaption>
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7540.jpg"
+              aria-label="Enlarge: Long straight blonde hair"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7540.jpg"
+                alt="Long straight blonde hair"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Long straight blonde hair</figcaption>
           </figure>
 
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7543.jpg"
-                 alt="Brown side-part hairstyle with curled ends"
-                 loading="lazy">
-            <figcaption>Curled styling</figcaption>
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7542.jpg"
+              aria-label="Enlarge: Blonde waves with a side part"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7542.jpg"
+                alt="Blonde waves with a side part"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Blonde waves with a side part</figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7543.jpg"
+              aria-label="Enlarge: Brown side-part style with curled ends"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7543.jpg"
+                alt="Brown side-part style with curled ends"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Brown side-part style with curled ends
+            </figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7545.jpg"
+              aria-label="Enlarge: Sleek dark hair with a centre part"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7545.jpg"
+                alt="Sleek dark hair with a centre part"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Sleek dark hair with a centre part</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="gallery-category"
-               id="makeup"
-               aria-labelledby="makeup-title">
-        <h3 id="makeup-title">Makeup</h3>
+      <!-- Makeup -->
 
-        <div class="beauty-photo-grid">
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
-                 alt="Pink eyeshadow, defined eyeliner and glossy pink lips"
-                 loading="lazy">
-            <figcaption>Pink makeup look</figcaption>
+      <section
+        class="gallery-category"
+        id="makeup"
+        data-category="makeup"
+        aria-labelledby="makeup-title"
+      >
+        <div class="category-heading reveal">
+          <h3 id="makeup-title">Makeup</h3>
+          <span>03 photos</span>
+        </div>
+
+        <div class="photo-grid">
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
+              aria-label="Enlarge: Pink eyeshadow and glossy pink lips"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7529.jpg"
+                alt="Pink eyeshadow and glossy pink lips"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>Pink eyeshadow and glossy pink lips</figcaption>
           </figure>
 
-          <figure class="beauty-photo">
-            <img src="BEE BEAUTY STUDIO PICTURES/IMG_7537.jpg"
-                 alt="Neutral eye makeup and glossy lips, paired with a green headwrap"
-                 loading="lazy">
-            <figcaption>Neutral makeup look</figcaption>
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7536.jpg"
+              aria-label="Enlarge: Neutral makeup with a green headwrap, side view"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7536.jpg"
+                alt="Neutral makeup with a green headwrap, side view"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Neutral makeup with a green headwrap, side view
+            </figcaption>
+          </figure>
+
+          <figure class="photo-card reveal">
+            <a
+              class="photo-open"
+              href="BEE BEAUTY STUDIO PICTURES/IMG_7537.jpg"
+              aria-label="Enlarge: Neutral makeup with a green headwrap, front view"
+            >
+              <img
+                src="BEE BEAUTY STUDIO PICTURES/IMG_7537.jpg"
+                alt="Neutral makeup with a green headwrap, front view"
+                loading="lazy"
+                decoding="async"
+              >
+              <span class="photo-expand" aria-hidden="true">↗</span>
+            </a>
+
+            <figcaption>
+              Neutral makeup with a green headwrap, front view
+            </figcaption>
           </figure>
         </div>
       </section>
     </section>
 
-    <section class="beauty-contact container"
-             id="contact"
-             aria-labelledby="contact-title">
+    <section
+      class="contact-panel container reveal"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <p class="eyebrow">Enquiries</p>
       <h2 id="contact-title">What do you have in mind?</h2>
 
-      <p>Visit Bee Beauty Studio on TikTok to see more work and
-        get in touch about services, availability and pricing.</p>
+      <p>
+        Visit Bee Beauty Studio on TikTok to see more work and
+        get in touch about services, availability and pricing.
+      </p>
 
-      <a class="button"
-         href="https://www.tiktok.com/@beebeauty_studio?_r=1&amp;_t=ZS-9AS76QxqmhO"
-         target="_blank"
-         rel="noopener noreferrer">
-        Visit Bee Beauty Studio on TikTok
+      <a
+        class="button"
+        href="https://www.tiktok.com/@beebeauty_studio?_r=1&amp;_t=ZS-9AS76QxqmhO"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>Visit Bee Beauty Studio on TikTok</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
       </a>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-content">
+      <a href="index.html" class="footer-brand">Bee by Blessing</a>
       <p>Bee Beauty Studio · Eket, Akwa Ibom</p>
     </div>
   </footer>
+
+  <dialog class="lightbox" aria-label="Photo viewer">
+    <div class="lightbox-toolbar">
+      <span class="lightbox-count"></span>
+
+      <button
+        type="button"
+        class="lightbox-close"
+        aria-label="Close photo viewer"
+      >
+        ×
+      </button>
+    </div>
+
+    <div class="lightbox-stage">
+      <button
+        type="button"
+        class="lightbox-prev"
+        aria-label="Previous photo"
+      >
+        ‹
+      </button>
+
+      <img class="lightbox-image" alt="">
+
+      <button
+        type="button"
+        class="lightbox-next"
+        aria-label="Next photo"
+      >
+        ›
+      </button>
+    </div>
+
+    <p class="lightbox-caption"></p>
+  </dialog>
 </body>
 </html>
