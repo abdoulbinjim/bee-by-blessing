@@ -1237,3 +1237,75 @@ h1 em {
     transform: none;
   }
 }
+
+/* Consistent arrow icons on desktop and mobile */
+
+.button-arrow,
+.photo-expand {
+  font-size: 0;
+  line-height: 0;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.button-arrow::after,
+.photo-expand::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: currentColor;
+
+  -webkit-mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 18L18 6M6 6h12v12' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 18L18 6M6 6h12v12' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+.button > span:first-child {
+  min-width: 0;
+}
+
+/* Replace the green emoji star with a pink decorative shape */
+
+.image-spark {
+  font-size: 0;
+  line-height: 0;
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+}
+
+.image-spark::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: var(--rose);
+
+  -webkit-mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 0L38 20L55 9L44 26L64 32L44 38L55 55L38 44L32 64L26 44L9 55L20 38L0 32L20 26L9 9L26 20Z' fill='black'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+
+  mask:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M32 0L38 20L55 9L44 26L64 32L44 38L55 55L38 44L32 64L26 44L9 55L20 38L0 32L20 26L9 9L26 20Z' fill='black'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+@media (max-width: 700px) {
+  .button-arrow::after,
+  .photo-expand::after {
+    width: 16px;
+    height: 16px;
+  }
+
+  .image-spark {
+    width: 49px;
+    height: 49px;
+  }
+}
